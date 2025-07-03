@@ -1,8 +1,10 @@
 export default function Index() {
+  console.log("🏁 INDEX ROUTE RENDERED");
+  
   return (
-    <div>
-      <h1>Hello World</h1>
-      <p>This is a static test page</p>
+    <div style={{ background: 'blue', padding: '20px', margin: '20px' }}>
+      <h1>INDEX ROUTE WORKING</h1>
+      <p>If you see this, React routing is working!</p>
     </div>
   );
 } 

@@ -29,23 +29,28 @@ if (import.meta) {
     //@ts-expect-error
     "app\\routes\\_index.tsx"
   );
-  import.meta.hot.lastModified = "1751574304023.3667";
+  import.meta.hot.lastModified = "1751579769525.6252";
 }
 function Index() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", { children: "Hello World" }, void 0, false, {
+  console.log("\u{1F3C1} INDEX ROUTE RENDERED");
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { style: {
+    background: "blue",
+    padding: "20px",
+    margin: "20px"
+  }, children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", { children: "INDEX ROUTE WORKING" }, void 0, false, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 23,
+      lineNumber: 28,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: "This is a static test page" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { children: "If you see this, React routing is working!" }, void 0, false, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 24,
+      lineNumber: 29,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/routes/_index.tsx",
-    lineNumber: 22,
+    lineNumber: 23,
     columnNumber: 10
   }, this);
 }
@@ -57,4 +62,4 @@ window.$RefreshSig$ = prevRefreshSig;
 export {
   Index as default
 };
-//# sourceMappingURL=/build/routes/_index-FA3EBY2T.js.map
+//# sourceMappingURL=/build/routes/_index-IOINSCWT.js.map
