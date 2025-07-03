@@ -1,0 +1,158 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "update": "Actualizar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "close": "Cerrar",
+    "confirm": "Confirmar",
+    "yes": "Sí",
+    "no": "No"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "settings": "Configuración",
+    "billing": "Facturación",
+    "help": "Ayuda",
+    "logout": "Cerrar sesión"
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "shopDomain": "Dominio de la tienda",
+    "enterShopDomain": "Ingresa el dominio de tu tienda Shopify",
+    "invalidDomain": "Dominio de tienda inválido",
+    "authenticationFailed": "Error de autenticación",
+    "loginRequired": "Por favor inicia sesión para continuar"
+  },
+  "app": {
+    "title": "OmniAI - Tu Asistente de Shopify con IA",
+    "subtitle": "Automatiza tu tienda Shopify con IA",
+    "description": "Transforma tus operaciones de eCommerce con automatización inteligente"
+  },
+  "chatbot": {
+    "title": "Asistente IA",
+    "placeholder": "Ingresa tu comando (ej., 'actualizar todos los títulos de camisetas para incluir edición limitada')",
+    "execute": "Ejecutar",
+    "processing": "Procesando...",
+    "commandRequired": "El comando es requerido",
+    "commandTooLong": "El comando es demasiado largo",
+    "rateLimitExceeded": "Límite de velocidad excedido. Por favor intenta más tarde.",
+    "commandFailed": "El comando falló",
+    "commandSuccess": "Comando ejecutado exitosamente"
+  },
+  "tiers": {
+    "tier1": {
+      "name": "Básico",
+      "price": "€85/mes",
+      "features": [
+        "Gestión básica de productos",
+        "Actualizaciones automáticas de descripciones de productos",
+        "Gestión de precios y descuentos",
+        "Seguimiento de inventario",
+        "Gestión de pedidos"
+      ]
+    },
+    "tier2": {
+      "name": "Pro",
+      "price": "€170/mes",
+      "features": [
+        "Todas las características del Nivel 1",
+        "Gestión avanzada de tienda",
+        "Generación de código con IA",
+        "Personalización de temas",
+        "Flujos de automatización personalizados"
+      ]
+    },
+    "tier3": {
+      "name": "Empresarial",
+      "price": "€299/mes",
+      "features": [
+        "Todas las características del Nivel 2",
+        "Construcción completa de tiendas",
+        "Recomendaciones de productos con IA",
+        "Análisis avanzado",
+        "Integraciones personalizadas"
+      ]
+    },
+    "upgrade": "Actualizar",
+    "currentPlan": "Plan Actual",
+    "upgradeRequired": "Esta característica requiere suscripción {{tier}}",
+    "upgradePrompt": "Actualiza para desbloquear características avanzadas"
+  },
+  "commands": {
+    "types": {
+      "product": "Producto",
+      "order": "Pedido",
+      "customer": "Cliente",
+      "theme": "Tema",
+      "code": "Código",
+      "store": "Tienda"
+    },
+    "actions": {
+      "update": "Actualizar",
+      "create": "Crear",
+      "delete": "Eliminar",
+      "bulk-update": "Actualización masiva"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "processing": "Procesando",
+      "completed": "Completado",
+      "failed": "Falló"
+    }
+  },
+  "errors": {
+    "generic": "Algo salió mal",
+    "network": "Error de red",
+    "unauthorized": "Acceso no autorizado",
+    "forbidden": "Acceso prohibido",
+    "notFound": "No encontrado",
+    "validationFailed": "Validación falló",
+    "serverError": "Error interno del servidor"
+  },
+  "settings": {
+    "title": "Configuración",
+    "account": "Cuenta",
+    "preferences": "Preferencias",
+    "darkMode": "Modo Oscuro",
+    "language": "Idioma",
+    "notifications": "Notificaciones",
+    "privacy": "Privacidad",
+    "security": "Seguridad"
+  },
+  "billing": {
+    "title": "Facturación",
+    "subscription": "Suscripción",
+    "paymentMethod": "Método de Pago",
+    "billingHistory": "Historial de Facturación",
+    "nextBilling": "Próxima Facturación",
+    "cancelSubscription": "Cancelar Suscripción",
+    "updatePayment": "Actualizar Método de Pago"
+  },
+  "feedback": {
+    "title": "Comentarios",
+    "rating": "Calificación",
+    "comment": "Comentario",
+    "type": "Tipo",
+    "submit": "Enviar Comentarios",
+    "thankYou": "¡Gracias por tus comentarios!"
+  },
+  "accessibility": {
+    "skipToContent": "Saltar al contenido principal",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "loading": "Cargando contenido",
+    "error": "Ocurrió un error"
+  }
+} 

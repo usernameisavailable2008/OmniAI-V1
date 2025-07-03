@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/mime-types": "^3.0.1"
+  }
+}

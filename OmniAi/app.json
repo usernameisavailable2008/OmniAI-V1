@@ -1,0 +1,52 @@
+{
+  "name": "OmniAI",
+  "description": "AI-powered Shopify store management app",
+  "repository": "https://github.com/yourusername/omniai",
+  "keywords": ["node", "shopify", "ai", "remix"],
+  "env": {
+    "SHOPIFY_API_KEY": {
+      "description": "Your Shopify API key",
+      "required": true
+    },
+    "SHOPIFY_API_SECRET": {
+      "description": "Your Shopify API secret",
+      "required": true
+    },
+    "SHOPIFY_APP_URL": {
+      "description": "Your app's URL (e.g., https://your-app.herokuapp.com)",
+      "required": true
+    },
+    "SHOPIFY_AUTH_CALLBACK_URL": {
+      "description": "Your app's callback URL (e.g., https://your-app.herokuapp.com/auth/callback)",
+      "required": true
+    },
+    "OPENAI_API_KEY": {
+      "description": "Your OpenAI API key",
+      "required": true
+    },
+    "SESSION_SECRET": {
+      "description": "A secret key for session encryption",
+      "required": true,
+      "generator": "secret"
+    },
+    "NODE_ENV": {
+      "description": "Environment (production/development)",
+      "value": "production"
+    },
+    "REDIS_URL": {
+      "description": "Redis connection URL",
+      "required": true
+    }
+  },
+  "addons": [
+    "heroku-redis:hobby-dev"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+} 

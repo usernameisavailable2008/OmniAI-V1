@@ -1,0 +1,137 @@
+.pricing-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px 16px;
+  text-align: center;
+}
+
+.logo-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.brand-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #ad4fff, #e8a2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.headline {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 48px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  background: rgba(29, 13, 54, 0.93);
+  border: 1.5px solid rgba(151, 71, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 3px 32px 0 rgba(64, 29, 90, 0.12);
+  width: 270px;
+  padding: 36px 24px 32px 24px;
+  text-align: center;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.plan-card.highlight {
+  border: 2px solid #ad4fff;
+  box-shadow: 0 8px 36px 0 rgba(151, 71, 255, 0.14);
+}
+
+.plan-tier {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.plan-price {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.per-month {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #bbb;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 34px 0;
+  text-align: left;
+}
+
+.plan-features li {
+  font-size: 1.07rem;
+  margin-bottom: 12px;
+  padding-left: 18px;
+  position: relative;
+  color: #fff;
+}
+
+.plan-features li::before {
+  content: "•";
+  color: #ad4fff;
+  position: absolute;
+  left: 0;
+}
+
+.choose-btn {
+  background: linear-gradient(90deg, #ad4fff 0%, #e8a2ff 100%);
+  color: #191029;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  transform-origin: center;
+}
+
+.choose-btn:hover:not(:disabled) {
+  background: #fff;
+  color: #ad4fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(173, 79, 255, 0.2);
+}
+
+.choose-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 960px) {
+  .plans {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .plan-card {
+    width: 100%;
+    max-width: 370px;
+  }
+} 
