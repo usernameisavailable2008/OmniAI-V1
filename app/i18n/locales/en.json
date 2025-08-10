@@ -1,0 +1,158 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "update": "Update",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "close": "Close",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "billing": "Billing",
+    "help": "Help",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "shopDomain": "Shop Domain",
+    "enterShopDomain": "Enter your Shopify store domain",
+    "invalidDomain": "Invalid shop domain",
+    "authenticationFailed": "Authentication failed",
+    "loginRequired": "Please log in to continue"
+  },
+  "app": {
+    "title": "OmniAI - Your AI-Powered Shopify Assistant",
+    "subtitle": "Automate your Shopify store with AI",
+    "description": "Transform your eCommerce operations with intelligent automation"
+  },
+  "chatbot": {
+    "title": "AI Assistant",
+    "placeholder": "Enter your command (e.g., 'update all T-shirt titles to include limited edition')",
+    "execute": "Execute",
+    "processing": "Processing...",
+    "commandRequired": "Command is required",
+    "commandTooLong": "Command is too long",
+    "rateLimitExceeded": "Rate limit exceeded. Please try again later.",
+    "commandFailed": "Command failed",
+    "commandSuccess": "Command executed successfully"
+  },
+  "tiers": {
+    "tier1": {
+      "name": "Basic",
+      "price": "€85/month",
+      "features": [
+        "Basic product management",
+        "Automated product description updates",
+        "Price and discount management",
+        "Inventory tracking",
+        "Order management"
+      ]
+    },
+    "tier2": {
+      "name": "Pro",
+      "price": "€170/month",
+      "features": [
+        "All Tier 1 features",
+        "Advanced store management",
+        "AI-powered code generation",
+        "Theme customization",
+        "Custom automation workflows"
+      ]
+    },
+    "tier3": {
+      "name": "Enterprise",
+      "price": "€299/month",
+      "features": [
+        "All Tier 2 features",
+        "Full store builds",
+        "AI-driven product recommendations",
+        "Advanced analytics",
+        "Custom integrations"
+      ]
+    },
+    "upgrade": "Upgrade",
+    "currentPlan": "Current Plan",
+    "upgradeRequired": "This feature requires {{tier}} subscription",
+    "upgradePrompt": "Upgrade to unlock advanced features"
+  },
+  "commands": {
+    "types": {
+      "product": "Product",
+      "order": "Order",
+      "customer": "Customer",
+      "theme": "Theme",
+      "code": "Code",
+      "store": "Store"
+    },
+    "actions": {
+      "update": "Update",
+      "create": "Create",
+      "delete": "Delete",
+      "bulk-update": "Bulk Update"
+    },
+    "status": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "completed": "Completed",
+      "failed": "Failed"
+    }
+  },
+  "errors": {
+    "generic": "Something went wrong",
+    "network": "Network error",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden",
+    "notFound": "Not found",
+    "validationFailed": "Validation failed",
+    "serverError": "Internal server error"
+  },
+  "settings": {
+    "title": "Settings",
+    "account": "Account",
+    "preferences": "Preferences",
+    "darkMode": "Dark Mode",
+    "language": "Language",
+    "notifications": "Notifications",
+    "privacy": "Privacy",
+    "security": "Security"
+  },
+  "billing": {
+    "title": "Billing",
+    "subscription": "Subscription",
+    "paymentMethod": "Payment Method",
+    "billingHistory": "Billing History",
+    "nextBilling": "Next Billing",
+    "cancelSubscription": "Cancel Subscription",
+    "updatePayment": "Update Payment Method"
+  },
+  "feedback": {
+    "title": "Feedback",
+    "rating": "Rating",
+    "comment": "Comment",
+    "type": "Type",
+    "submit": "Submit Feedback",
+    "thankYou": "Thank you for your feedback!"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "loading": "Loading content",
+    "error": "Error occurred"
+  }
+} 

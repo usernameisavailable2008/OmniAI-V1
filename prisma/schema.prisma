@@ -1,0 +1,166 @@
+// Prisma schema for OmniAI
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  shopId    String?  @unique
+  tier      Int      @default(1)
+  settings  Json?    @default("{}")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  sessions      Session[]
+  commands      Command[]
+  subscriptions Subscription[]
+  feedbacks     Feedback[]
+
+  @@map("users")
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  shop      String
+  token     String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model Command {
+  id          String   @id @default(cuid())
+  userId      String
+  shop        String
+  type        String
+  action      String
+  parameters  Json
+  status      String   @default("pending") // pending, processing, completed, failed
+  result      Json?
+  error       String?
+  executionTime Int?   // milliseconds
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("commands")
+  @@index([userId])
+  @@index([shop])
+  @@index([createdAt])
+}
+
+model Subscription {
+  id              String    @id @default(cuid())
+  userId          String
+  tier            Int
+  status          String    // active, cancelled, expired, past_due
+  stripeCustomerId String?
+  stripeSubscriptionId String?
+  currentPeriodStart DateTime?
+  currentPeriodEnd   DateTime?
+  cancelAtPeriodEnd  Boolean @default(false)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("subscriptions")
+  @@index([userId])
+  @@index([status])
+}
+
+model Feedback {
+  id        String   @id @default(cuid())
+  userId    String
+  commandId String?
+  rating    Int      // 1-5
+  comment   String?
+  type      String   // command, general, bug, feature
+  status    String   @default("open") // open, in_progress, resolved
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("feedbacks")
+  @@index([userId])
+  @@index([type])
+  @@index([createdAt])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  action    String
+  resource  String?
+  details   Json?
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@map("audit_logs")
+  @@index([userId])
+  @@index([action])
+  @@index([createdAt])
+}
+
+model Cache {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     Json
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("cache")
+  @@index([key])
+  @@index([expiresAt])
+}
+
+model WebhookEvent {
+  id        String   @id @default(cuid())
+  shop      String
+  topic     String
+  payload   Json
+  processed Boolean  @default(false)
+  error     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("webhook_events")
+  @@index([shop])
+  @@index([topic])
+  @@index([processed])
+  @@index([createdAt])
+}
+
+model PerformanceMetric {
+  id        String   @id @default(cuid())
+  metric    String
+  value     Float
+  tags      Json?
+  timestamp DateTime @default(now())
+
+  @@map("performance_metrics")
+  @@index([metric])
+  @@index([timestamp])
+} 

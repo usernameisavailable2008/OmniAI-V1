@@ -1,0 +1,18 @@
+# existing ignores
+node_modules
+.env
+.env.*
+.cache
+build
+dist
+.next
+.turbo
+.parcel-cache
+.vercel
+coverage
+*.log
+.DS_Store
+
+# binaries
+*.exe
+OmniAi/ngrok.exe
